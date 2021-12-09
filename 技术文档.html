@@ -1,0 +1,118 @@
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        border-right-width: 1px;
+        border-right-style: solid;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav>ul>li {
+        list-style: none;
+        border-top-width: 1px;
+        border-top-style: solid;
+        height: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 30px;
+    }
+
+    #main-doc {
+        width: 100%;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <header style="position: relative; left: 0; top: 0;">
+                <h1>
+                    JS Documentation
+                </h1>
+            </header>
+            <ul>
+                <li>
+                    <a href="#Introduction">Introduction</a>
+                </li>
+                <li>
+                    <a href="#What_you_should_already_know">What you should already know</a>
+                </li>
+                <li>
+                    <a href="#JavaScript_and_Java">JavaScript and Java</a>
+                </li>
+                <li>
+                    <a href="#Hello_World">Hello World</a>
+                </li>
+                <li>
+                    <a href="#Variables">Variables</a>
+                </li>
+                <li>
+                    <a href="#Declaring_variables">Declaring variables</a>
+                </li>
+                <li>
+                    <a href="#Varibale_scope">Varibale scope</a>
+                </li>
+                <li>
+                    <a href="#Global_variables">Global variables</a>
+                </li>
+                <li>
+                    <a href="#Constants">Constants</a>
+                </li>
+                <li>
+                    <a href="#Data_types">Data types</a>
+                </li>
+                <li>
+                    <a href="#if...else statement">if...else statement</a>
+                </li>
+                <li>
+                    <a href="#while_statement">while statement</a>
+                </li>
+                <li>
+                    <a href="#Function_declarations">Function declarations</a>
+                </li>
+                <li>
+                    <a href="#Reference">Reference</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>
+                    <h2>Introduction</h2>
+                </header>
+                <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight
+                    language. Inside a host environment (for example, a web browser), JavaScript can be connected to the
+                    objects of its environment to provide programmatic control over them.</p>
+                <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of
+                    language elements such as operators, control structures, and statements. Core JavaScript can be
+                    extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+                <ul>
+                    <li>Client-side JavaScript extends the core language by supplying objects to control a browser and
+                        its Document Object Model (DOM). For example, client-side extensions allow an application to
+                        place elements on an HTML form and respond to user events such as mouse clicks, form input, and
+                        page navigation.</li>
+                    <li>Server-side JavaScript extends the core language by supplying objects relevant to running
+                        JavaScript on a server. For example, server-side extensions allow an application to communicate
+                        with a database, provide continuity of information from one invocation to another of the
+                        application, or perform file manipulations on a server.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

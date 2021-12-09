@@ -1,0 +1,119 @@
+<style>
+    .nav-ul,
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-li {
+        list-style-type: none;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    #form {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20;
+        border-radius: 5px;
+    }
+
+    #submit {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20;
+        background-color: gold;
+        margin-top: 5px;
+        font-weight: 1000;
+    }
+
+    .fea-li {
+        font-size: 30;
+        margin-top: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 500px) {
+        .fea-li {
+            font-size: 5;
+            margin-top: 10px;
+        }
+    }
+</style>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <header id="header" style="position: fixed;top: 0px;left: 0px; background-color: gray;width: 100%;">
+        <div style="width: 30%;">
+            <img id="header-img"
+                src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+                style="width: 100%;">
+        </div>
+        <nav id="nav-bar" style="width: 70%;">
+            <ul class="nav-ul">
+                <li class="nav-li"><a class="nav-link" href="#features">Features</a> </li>
+                <li class="nav-li"><a class="nav-link" href="#working">How it works</a></li>
+                <li class="nav-li"><a class="nav-link" href="#pricing">Pricing</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <h3>Handcrafted, home-made masterpieces</h3>
+        <input id="email" type="email" name="email" placeholder="Enter your email address" required>
+        <input id="submit" type="submit" value="GET STARTED">
+    </form>
+    <div class="container">
+        <div id="features">
+            <h1>Features</h1>
+            <ul>
+                <li class="fea-li">
+                    aaaaa
+                </li>
+                <li class="fea-li">
+                    bbbbb
+                </li>
+                <li class="fea-li">
+                    ccccc
+                </li>
+                <li class="fea-li">
+                    ddddd
+                </li>
+                <li class="fea-li">
+                    eeeee
+                </li>
+            </ul>
+        </div>
+        <div id="working">
+            <h1>How it works</h1>
+            <video id="video" controls>
+                <source src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0">
+            </video>
+        </div>
+        <div id="pricing">
+            <h1>Pricing</h1>
+            <ul>
+                <li class="fea-li">Community 199/year</li>
+                <li class="fea-li">Professional 399/year</li>
+                <li class="fea-li">Enterprise 599/year</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

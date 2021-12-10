@@ -1,9 +1,244 @@
 <style>
-    
+    .root {
+        --red: #be3144;
+        --white: #f0f0f0;
+        --blue: #45567d;
+        --gray: #303841;
+    }
+
+    #navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--red);
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 22px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #welcome-section {
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1,
+    h2 {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    h1 {
+        color: var(--white);
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    h2 {
+        color: var(--red);
+        font-size: 2rem;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .project-section {
+        background-color: var(--blue);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        color: var(--white);
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom-color: var(--white);
+        border-bottom-style: solid;
+        border-bottom-width: 0.3rem;
+    }
+
+    .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+        background-color: var(--blue);
+    }
+
+    .project-tile {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 22px;
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--gray);
+    }
+
+    a p {
+        text-align: center;
+    }
+
+    p:hover .show {
+        visibility: visible;
+        color: orange;
+    }
+
+    .show {
+        visibility: hidden;
+        color: orange;
+    }
+
+    .btn-a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 22px;
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--gray);
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact {
+        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+    h4 {
+        color: var(--white);
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .contact-a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 22px;
+        font-family: 'Poppins', sans-serif;
+        background-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    .move {
+        position: relative;
+    }
+
+    .move:hover {
+        animation-name: down;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes down {
+        0% {
+            top: 0px;
+        }
+
+        100% {
+            top: 5px;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+        border-top-color: var(--red);
+        border-top-width: 5px;
+        border-top-style: solid;
+        justify-content: space-around;
+        color: var(--white);
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 500px) {
+        .move:hover {
+        animation-name: down;
+        animation-duration: 300ms;
+        animation-fill-mode: forwards;
+    }
+}
 </style>
 
 <!DOCTYPE html>
 <html>
-    <body>
-    </body>
+
+<body style="margin: 0;">
+    <div class="root">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome-section" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="welcome-section">
+            <h1>Hey I am Mimic</h1>
+            <h2>a web developer</h2>
+        </section>
+        <section id="projects" class="project-section">
+            <h3>These are some of my projects</h3>
+            <div class="project">
+                <a class="project-tile" id="profile-link" target="_blank" href="https://codepen.io/firecraps/pen/MWEemOw">
+                    <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p><span class="show">&lt;</span> 致敬页 <span class="show">/ &gt;</span></p>
+                </a>
+                <a class="project-tile" target="_blank" href="https://codepen.io/firecraps/pen/eYGzEmL">
+                    <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p><span class="show">&lt;</span> 调查表格 <span class="show">/ &gt;</span></p>
+                </a>
+                <a class="project-tile" target="_blank" href="https://codepen.io/firecraps/pen/abLZLGJ">
+                    <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p><span class="show">&lt;</span> 登录 <span class="show">/ &gt;</span></p>
+                </a>
+                <a class="project-tile" target="_blank" href="https://codepen.io/firecraps/pen/NWaRPbg">
+                    <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
+                    <p><span class="show">&lt;</span> 技术文档 <span class="show">/ &gt;</span></p>
+                </a>
+            </div>
+            <a class="btn-a" target="_blank" href="https://codepen.io/Firecraps/">Show All</a>
+        </section>
+
+        <section id="contact" class="contact">
+            <h1>Let's work together...</h1>
+            <h4>How do you take your coffee?</h4>
+            <div class="move">
+                <a target="_blank" class="contact-a" href="https://github.com/Firecraps">GitHub</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>**This is just a fake portfolio. All the projects and contact details given are not real.</p>
+            <p> ©Created by Firecraps</p>
+        </footer>
+    </div>
+</body>
+
 </html>

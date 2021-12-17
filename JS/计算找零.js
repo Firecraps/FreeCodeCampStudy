@@ -1,15 +1,3 @@
-let mapping = [
-    ["PENNY", 0.01],
-    ["NICKEL", 0.05],
-    ["DIME", 0.1],
-    ["QUARTER", 0.25],
-    ["ONE", 1],
-    ["FIVE", 5],
-    ["TEN", 10],
-    ["TWENTY", 20],
-    ["ONE HUNDRED", 100]
-];
-
 function getCacheCount(cid) {
     let result = {};
     cid.forEach(t => {
@@ -131,6 +119,18 @@ function checkCashRegister(price, cash, cid) {
     console.log(result);
     return result;
 }
+
+let mapping = [
+    ["PENNY", 0.01],
+    ["NICKEL", 0.05],
+    ["DIME", 0.1],
+    ["QUARTER", 0.25],
+    ["ONE", 1],
+    ["FIVE", 5],
+    ["TEN", 10],
+    ["TWENTY", 20],
+    ["ONE HUNDRED", 100]
+];
 
 checkCashRegister(3.26, 100, [
     ["PENNY", 1.01],

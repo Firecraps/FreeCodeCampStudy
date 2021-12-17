@@ -56,15 +56,15 @@ function getCacheCount(cid) {
 }
 
 function excute(types, change, result, value) {
-    if(value === -1){
+    if (value === -1) {
         result.change = [];
         return;
     }
     //类型,面值,总张数
     let curType = {
-        key:mapping[value][0],
-        value:mapping[value][1],
-        count:types[mapping[value][0]]
+        key: mapping[value][0],
+        value: mapping[value][1],
+        count: types[mapping[value][0]]
     };
     //该类型最大需要几张
     let count = Math.floor((change * 100) / (curType.value * 100));
@@ -75,31 +75,31 @@ function excute(types, change, result, value) {
             result.change.push([curType.key, money]);
             change = (change - money).toFixed(2);
             value -= 1;
-            if(change > 0){
-                return excute(types,change,result,value);
-            } else{
+            if (change > 0) {
+                return excute(types, change, result, value);
+            } else {
                 return;
             }
         } else {
             //有几张先分配
-            if(curType.count > 0){
+            if (curType.count > 0) {
                 let money = curType.count * curType.value;
                 result.change.push([curType.key, money]);
                 change = (change - money).toFixed(2);
                 value -= 1;
-                if(change > 0){
-                    return excute(types,change,result,value);
-                } else{
+                if (change > 0) {
+                    return excute(types, change, result, value);
+                } else {
                     return;
                 }
-            } else{
+            } else {
                 value -= 1;
-                return excute(types,change,result,value);
+                return excute(types, change, result, value);
             }
         }
-    } else{
+    } else {
         value -= 1;
-        return excute(types,change,result,value);
+        return excute(types, change, result, value);
     }
 }
 
@@ -121,10 +121,10 @@ function checkCashRegister(price, cash, cid) {
     } else {
         //每种纸币各有几张
         let types = getCacheCount(cid);
-        excute(types,change,result,8);
-        if(result.change.length === 0){
+        excute(types, change, result, 8);
+        if (result.change.length === 0) {
             result.status = "INSUFFICIENT_FUNDS";
-        } else{
+        } else {
             result.status = "OPEN";
         }
     }
@@ -132,4 +132,14 @@ function checkCashRegister(price, cash, cid) {
     return result;
 }
 
-checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+checkCashRegister(3.26, 100, [
+    ["PENNY", 1.01],
+    ["NICKEL", 2.05],
+    ["DIME", 3.1],
+    ["QUARTER", 4.25],
+    ["ONE", 90],
+    ["FIVE", 55],
+    ["TEN", 20],
+    ["TWENTY", 60],
+    ["ONE HUNDRED", 100]
+]);
